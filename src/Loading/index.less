@@ -1,0 +1,61 @@
+
+.wrap {
+    width: 100px;
+    // position: fixed;
+    top: 10%;
+    // 使其左右居中
+    left: calc(50% - 50px);
+
+    .number {
+      font-size: 28px;
+      color: #1890ff;
+      display: inline-block;
+      width: 24px;
+      text-align: center;
+      // 匀速运行
+      animation-timing-function: linear;
+      // 无限循环
+      animation-iteration-count: infinite;
+      // 执行周期设置为 1s
+      animation-duration: 1s;
+    }
+
+    .first {
+      animation-name: scale;
+      // animation-duration: 1s;
+      animation-delay: -1s;
+    }
+    .second {
+      animation-name: scale;
+      // animation-duration: 1s;
+      animation-delay: -.85s;
+    }
+    .third {
+      animation-name: scale;
+      // animation-duration: 1s;
+      animation-delay: -.7s;
+    }
+    .fourth {
+      animation-name: scale;
+      animation-duration: 1s;
+      animation-delay: -0.55s;
+    }
+  }
+
+@keyframes scale {
+  0% {
+    transform: scale(0.5);
+  }
+  25% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
