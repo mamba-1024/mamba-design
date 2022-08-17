@@ -16,7 +16,7 @@ export default defineConfig({
     null,
     {
       title: 'GitHub',
-      path: 'https://github.com/mamba-1024/my-compss',
+      path: 'https://github.com/mamba-1024/my-comps',
     },
   ],
   // 按需引入 antd
