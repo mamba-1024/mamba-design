@@ -19,7 +19,7 @@ group:
 
 ```tsx
 import React from 'react';
-import { Loading } from 'my-comp';
+import { Loading } from 'my-comps';
 
 export default () => <Loading loading={true} />;
 ```

@@ -1,4 +1,4 @@
-# my-comp
+# my-comps
 
 ## Getting Started
 

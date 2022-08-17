@@ -21,7 +21,7 @@ group:
 ```tsx
 import React, { useState } from 'react';
 import { Button, Col, message, Row, Space, Switch } from 'antd';
-import { MindMenu } from 'my-comp';
+import { MindMenu } from 'my-comps';
 
 const resource: any[] = [
   {
