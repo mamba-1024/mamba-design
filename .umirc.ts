@@ -12,6 +12,13 @@ export default defineConfig({
   // Because of using GitHub Pages
   base: `/${repo}/`,
   publicPath: `/${repo}/`,
+  navs: [
+    null,
+    {
+      title: 'GitHub',
+      path: 'https://github.com/mamba-1024/my-comps',
+    },
+  ],
   // 按需引入 antd
   extraBabelPlugins: [
     [
