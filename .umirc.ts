@@ -1,6 +1,6 @@
 import { defineConfig } from 'dumi';
 
-const repo = 'my-comps';
+const repo = 'mamba-design';
 
 export default defineConfig({
   title: repo,
@@ -16,7 +16,7 @@ export default defineConfig({
     null,
     {
       title: 'GitHub',
-      path: 'https://github.com/mamba-1024/my-comps',
+      path: 'https://github.com/mamba-1024/mamba-design',
     },
   ],
   // 按需引入 antd

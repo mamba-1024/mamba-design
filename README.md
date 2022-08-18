@@ -1,4 +1,4 @@
-# my-comps
+# mamba-design
 
 ## Getting Started
 

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "my-comps",
+  "name": "mamba-design",
   "version": "0.0.1",
   "scripts": {
     "start": "dumi dev",
@@ -72,7 +72,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mamba-1024/my-comps",
+    "url": "https://github.com/mamba-1024/mamba-design",
     "branch": "main"
   },
   "keywords": [
@@ -82,7 +82,7 @@
   "author": "huagnketong",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mamba-1024/my-comps/issues"
+    "url": "https://github.com/mamba-1024/mamba-design/issues"
   },
-  "homepage": "https://github.com/mamba-1024/my-comps#readme"
+  "homepage": "https://github.com/mamba-1024/mamba-design#readme"
 }

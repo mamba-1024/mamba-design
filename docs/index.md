@@ -1,7 +1,7 @@
 ---
 hero:
-  title: my-comps
-  desc: my-comps site example
+  title: mamba-design
+  desc: mamba-design site example
   actions:
     - text: Getting Started
       link: /components
@@ -18,4 +18,4 @@ features:
 footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
 ---
 
-## Hello my-comps!
+## Hello mamba-design!

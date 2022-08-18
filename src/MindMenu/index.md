@@ -9,8 +9,8 @@ group:
   order: 0
 ---
 
-
 # MindMenu 智能菜单
+
 鼠标移入展示对应的子菜单
 
 ## 何时使用
@@ -18,10 +18,11 @@ group:
 菜单量比较大的时候，可以采用动态展示的方式。根据分类方便用户看到需要的菜单
 
 ## 代码演示
+
 ```tsx
 import React, { useState } from 'react';
 import { Button, Col, message, Row, Space, Switch } from 'antd';
-import { MindMenu } from 'my-comps';
+import { MindMenu } from 'mamba-design';
 
 const resource: any[] = [
   {
@@ -172,28 +173,26 @@ export default () => {
     </Row>
   );
 };
-
 ```
 
 ## API
 
 ### MindMenu
 
-| 参数 | 说明 | 类型 | 默认值 |
-| ---- | ---- | ---- | ---- |
-| dataSource | 数据源 | DataItem[] | - |
-| collapsed | 是否折叠 | boolean | false |
-| search | 是否显示搜索框 | boolean | false |
-| onSelect | 点击菜单的回调 | function(val: DataItem) | - |
-| layout | 菜单布局 | String | 'inline' |
-| children | 子元素，当 collapsed 为 true 的时候展示 | ReactNode | - |
+| 参数       | 说明                                    | 类型                    | 默认值   |
+| ---------- | --------------------------------------- | ----------------------- | -------- |
+| dataSource | 数据源                                  | DataItem[]              | -        |
+| collapsed  | 是否折叠                                | boolean                 | false    |
+| search     | 是否显示搜索框                          | boolean                 | false    |
+| onSelect   | 点击菜单的回调                          | function(val: DataItem) | -        |
+| layout     | 菜单布局                                | String                  | 'inline' |
+| children   | 子元素，当 collapsed 为 true 的时候展示 | ReactNode               | -        |
 
 ### DataItem
 
-| 参数 | 说明 | 类型 | 默认值 |
-| ---- | ---- | ---- | ---- |
-| name | 菜单名称 | string | - |
-| key | 菜单的唯一标识 | string | - |
-| router | 菜单的路由 | string | - |
-| children | 子菜单 | DataItem[] | - |
-
+| 参数     | 说明           | 类型       | 默认值 |
+| -------- | -------------- | ---------- | ------ |
+| name     | 菜单名称       | string     | -      |
+| key      | 菜单的唯一标识 | string     | -      |
+| router   | 菜单的路由     | string     | -      |
+| children | 子菜单         | DataItem[] | -      |
