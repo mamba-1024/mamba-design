@@ -12,7 +12,7 @@ import styles from './style.module.less';
  * @returns {Array}
  */
 function getOptions(array: DataItem[]): DataItem[] {
-  let arr: DataItem[] = [];
+  const arr: DataItem[] = [];
 
   function loop(a: DataItem[]) {
     a.forEach((ele) => {
@@ -41,10 +41,10 @@ export default function MindMenu(props: IProps) {
 
   const [active, setActive] = useState<string>(''); // 选中的菜单
   const [showSub, setShowSub] = useState<boolean>(false); // 是否显示子菜单
-  let timeout = useRef<any>(null); //  设置延迟定时器，防止鼠标移到tab内容经过菜单时的切换
-  let mouseLocs = useRef<Position[]>([]); // 记录鼠标移动时的坐标数组
-  let firstSlope = useRef<Position>(null); // 菜单栏的固定点1， 根据菜单栏和内容的位置而改变
-  let secondSlope = useRef<Position>(null); // 菜单栏的固定点2， 根据菜单栏和内容的位置而改变
+  const timeout = useRef<any>(null); //  设置延迟定时器，防止鼠标移到tab内容经过菜单时的切换
+  const mouseLocs: Position[] = useMemo(() => [], []); // 记录鼠标移动时的坐标数组
+  let firstSlope: Position = useMemo(() => ({ x: 0, y: 0 }), []); // 菜单栏的固定点1， 根据菜单栏和内容的位置而改变
+  let secondSlope: Position = useMemo(() => ({ x: 0, y: 0 }), []); // 菜单栏的固定点2， 根据菜单栏和内容的位置而改变
   const refNavigation = useRef<HTMLDivElement>(null);
   const refNav = useRef<HTMLUListElement>(null);
   const refSubnav = useRef<HTMLDivElement>(null);
@@ -68,28 +68,27 @@ export default function MindMenu(props: IProps) {
    */
   function proPosInTriangle(p1: Position, p2: Position, p3: Position, m: Position) {
     // 结束时鼠标坐标位置
-    let x = m.x,
-      y = m.y,
-      // 开始鼠标坐标位置
-      x1 = p1.x,
-      y1 = p1.y,
-      // 菜单栏包裹层右上角坐标
-      x2 = p2.x,
-      y2 = p2.y,
-      // 右下角坐标
-      x3 = p3.x,
-      y3 = p3.y,
-      // (y2 - y1) / (x2 - x1)为两坐标连成直线的斜率
-      // 因为直线的公式为y=kx+b;当斜率相同时，只要比较
-      // b1和b2的差值就可以知道该点是在
-      // (x1,y1),(x2,y2)的直线的哪个方向
-      // 当r1大于0，说明该点在直线右侧，其它以此类推
-      r1 = y - y1 - ((y2 - y1) / (x2 - x1)) * (x - x1),
-      r2 = y - y2 - ((y3 - y2) / (x3 - x2)) * (x - x2),
-      r3 = y - y3 - ((y1 - y3) / (x1 - x3)) * (x - x3),
-      compare;
+    const { x } = m;
+    const { y } = m;
+    // 开始鼠标坐标位置
+    const x1 = p1.x;
+    const y1 = p1.y;
+    // 菜单栏包裹层右上角坐标
+    const x2 = p2.x;
+    const y2 = p2.y;
+    // 右下角坐标
+    const x3 = p3.x;
+    const y3 = p3.y;
+    // (y2 - y1) / (x2 - x1)为两坐标连成直线的斜率
+    // 因为直线的公式为y=kx+b;当斜率相同时，只要比较
+    // b1和b2的差值就可以知道该点是在
+    // (x1,y1),(x2,y2)的直线的哪个方向
+    // 当r1大于0，说明该点在直线右侧，其它以此类推
+    const r1 = y - y1 - ((y2 - y1) / (x2 - x1)) * (x - x1);
+    const r2 = y - y2 - ((y3 - y2) / (x3 - x2)) * (x - x2);
+    const r3 = y - y3 - ((y1 - y3) / (x1 - x3)) * (x - x3);
 
-    compare = r1 * r2 * r3 < 0 && r1 > 0;
+    const compare = r1 * r2 * r3 < 0 && r1 > 0;
     // 返回是否在三角形内的结果
     return compare;
   }
@@ -124,17 +123,17 @@ export default function MindMenu(props: IProps) {
    */
   function ensureTriangleDots() {
     // 获取菜单栏的位置
-    const info = getInfo(refNav.current);
+    const info = getInfo(refNav.current as HTMLUListElement);
     const x1 = info.leftAndWidth;
     const y1 = info.top;
     const x2 = x1;
     const y2 = info.topAndHeight;
 
-    firstSlope.current = {
+    firstSlope = {
       x: x1,
       y: y1,
     };
-    secondSlope.current = {
+    secondSlope = {
       x: x2,
       y: y2,
     };
@@ -145,12 +144,7 @@ export default function MindMenu(props: IProps) {
       let diff;
       try {
         // 是否在指定三角形内
-        diff = proPosInTriangle(
-          mouseLocs.current[0],
-          firstSlope.current,
-          secondSlope.current,
-          mouseLocs.current[2],
-        );
+        diff = proPosInTriangle(mouseLocs[0], firstSlope, secondSlope, mouseLocs[2]);
       } catch (ex) {
         console.log(ex);
       }
@@ -166,7 +160,7 @@ export default function MindMenu(props: IProps) {
         setShowSub(true);
       }
     },
-    [mouseLocs, timeout],
+    [timeout, mouseLocs, firstSlope, secondSlope],
   );
 
   const onMouseEnter = () => {
@@ -180,20 +174,20 @@ export default function MindMenu(props: IProps) {
   // 移出菜单所在区域
   const onMouseLeave = () => {
     if (refSubnav.current) {
-      setActive(null);
+      setActive('');
       setShowSub(false);
     }
   };
 
   // 记录鼠标在菜单栏中移动的最后三个坐标位置
   const onMousemove = (event: React.MouseEvent) => {
-    mouseLocs.current.push({
+    mouseLocs.push({
       x: event.pageX,
       y: event.pageY,
     });
-    if (mouseLocs.current.length > 3) {
+    if (mouseLocs.length > 3) {
       // 移除超过三项的数据
-      mouseLocs.current.shift();
+      mouseLocs.shift();
     }
   };
   // 鼠标移出的时候，清除延时器
@@ -215,8 +209,8 @@ export default function MindMenu(props: IProps) {
           <li key={ele.key}>
             <div
               key={ele.key}
-              className={`${styles['cateMenuItem']} ${
-                ele.key === active && styles['cateMenuItemActive']
+              className={`${styles.cateMenuItem} ${
+                ele.key === active && styles.cateMenuItemActive
               }`}
               onMouseOver={() => onMouseOver(ele)}
               onMouseMove={onMousemove}
@@ -230,7 +224,7 @@ export default function MindMenu(props: IProps) {
         ))}
       </ul>
       <div
-        className={`${styles['tabContent']} ${showSub && styles.tabContentActive} ${
+        className={`${styles.tabContent} ${showSub && styles.tabContentActive} ${
           search && styles.search
         }`}
         ref={refSubnav}
@@ -239,9 +233,7 @@ export default function MindMenu(props: IProps) {
         {dataSource?.map((ele) => (
           <div
             key={ele.key}
-            className={`${styles.items} ${
-              ele.key === active && styles[`${layout}Active`]
-            }`}
+            className={`${styles.items} ${ele.key === active && styles[`${layout}Active`]}`}
           >
             {ele.children?.map((item) => (
               <MenuTree key={item.key} trees={item} layout={layout} onSelect={onSelect} />

@@ -2,7 +2,7 @@ export interface IProps {
   /**
    * 数据源
    */
-  dataSource?: Array<DataItem>;
+  dataSource?: DataItem[];
   /**
    * 选中菜单事件
    */
