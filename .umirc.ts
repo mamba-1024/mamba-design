@@ -4,9 +4,8 @@ const repo = 'mamba-design';
 
 export default defineConfig({
   title: repo,
-  favicon:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
-  logo: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+  favicon: 'https://raw.githubusercontent.com/mamba-1024/mamba-design/main/images/icon.png',
+  logo: 'https://raw.githubusercontent.com/mamba-1024/mamba-design/main/images/icon.png',
   outputPath: 'docs-dist',
   mode: 'site',
   // Because of using GitHub Pages

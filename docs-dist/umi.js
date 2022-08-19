@@ -40773,7 +40773,7 @@
   },
   q3YX: function (e) {
     e.exports = JSON.parse(
-      '{"menus":{"en-US":{"/components":[{"title":"MindMenu","path":"/components/MindMenu","meta":{"order":0},"children":[]},{"title":"Loading","path":"/components/Loading","meta":{"order":2},"children":[]}],"*":[{"path":"/","title":"Hello mamba-design!","meta":{}}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"\u7ec4\u4ef6","path":"/components"},{"title":"GitHub","path":"https://github.com/mamba-1024/mamba-design"}]},"title":"mamba-design","logo":"https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png","mode":"site","repository":{"url":"https://github.com/mamba-1024/mamba-design","branch":"main"},"theme":{}}',
+      '{"menus":{"en-US":{"/components":[{"title":"MindMenu","path":"/components/MindMenu","meta":{"order":0},"children":[]},{"title":"Loading","path":"/components/Loading","meta":{"order":2},"children":[]}],"*":[{"path":"/","title":"Hello mamba-design!","meta":{}}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"\u7ec4\u4ef6","path":"/components"},{"title":"GitHub","path":"https://github.com/mamba-1024/mamba-design"}]},"title":"mamba-design","logo":"https://raw.githubusercontent.com/mamba-1024/mamba-design/main/images/icon.png","mode":"site","repository":{"url":"https://github.com/mamba-1024/mamba-design","branch":"main"},"theme":{}}',
     );
   },
   qA1w: function (e, t, n) {
