@@ -68,8 +68,7 @@ export default function MindMenu(props: IProps) {
    */
   function proPosInTriangle(p1: Position, p2: Position, p3: Position, m: Position) {
     // 结束时鼠标坐标位置
-    const { x } = m;
-    const { y } = m;
+    const { x, y } = m;
     // 开始鼠标坐标位置
     const x1 = p1.x;
     const y1 = p1.y;
@@ -94,14 +93,18 @@ export default function MindMenu(props: IProps) {
   }
 
   /**
-   * 获取元素相对于浏览器左上角的坐标位置，为正值
+   * 获取元素相对于整个网页左上角的位置
    * @param { HTMLElement } element
    * @return {Position}
    * @constructor
    */
   function LocFromdoc(element: HTMLElement): Position {
+    /**
+     * getBoundingClientRect, https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect
+     * 则可以将当前的滚动位置（可通过 window.scrollX 和 window.scrollY 获得）添加到 y / top 和 x / left 属性上
+     */
     const { x, y } = element.getBoundingClientRect();
-    return { x, y };
+    return { x: x + window.scrollX, y: y + window.scrollY };
   }
   /**
    * 记录元素的位置信息
@@ -118,7 +121,7 @@ export default function MindMenu(props: IProps) {
     };
   }
   /**
-   * 根据内容栏相对于菜单栏的位置， 返回菜单栏的固定点1，和固定点2，保存在this.firstSlope和this.secondSlope对象里
+   * 根据内容栏相对于菜单栏的位置， 返回菜单栏的固定点1，和固定点2，保存在firstSlope和secondSlope对象里
    * 即 左侧菜单栏的右上角和右下角的位置
    */
   function ensureTriangleDots() {
@@ -179,12 +182,20 @@ export default function MindMenu(props: IProps) {
     }
   };
 
-  // 记录鼠标在菜单栏中移动的最后三个坐标位置
+  // 记录鼠标在菜单栏中移动的最后三个坐标位置，相对于整个网页左上角的位置
   const onMousemove = (event: React.MouseEvent) => {
-    mouseLocs.push({
-      x: event.pageX,
-      y: event.pageY,
-    });
+    /**
+     * pageX/Y 兼容性：除IE6/7/8不支持外，其余浏览器均支持
+     * clientX/Y 兼容性：所有浏览器均支持。获取的是相对于当前屏幕的坐标，忽略页面滚动因素。但是我们需要考虑页面滚动，也就是相对于文档（body元素）的坐标，加上滚动的位移就可以了
+     */
+    const e = event || window.event;
+    const scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+    const scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+    const x = e.pageX || e.clientX + scrollX;
+    const y = e.pageY || e.clientY + scrollY;
+
+    mouseLocs.push({ x, y });
+
     if (mouseLocs.length > 3) {
       // 移除超过三项的数据
       mouseLocs.shift();

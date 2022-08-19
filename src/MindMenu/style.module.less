@@ -1,40 +1,41 @@
 .navigation {
   /* position: relative */
   z-index: 20;
-  height: 100%;
   display: inline-block;
+  height: 100%;
   // padding-left: 12px;
 }
 
 .popover {
   z-index: 20;
-  height: 100%;
   width: 100%;
+  height: 100%;
   /* height: 500px; */
   overflow: hidden;
 }
 
 .menu {
   float: left;
-  height: 100%;
   width: 160px;
+  height: 100%;
+  margin: 0;
+  padding-left: 0;
+  font-weight: 600;
   list-style: none;
   background: #fefefe;
-  margin: 0;
-  font-weight: 600;
   /* overflow-y: scroll;
   overflow-x: hidden; */
 }
 
 .cateMenuItem {
   padding: 8px 0;
-  padding-left: 10px;
+  padding-left: 12px;
   transition: background-color 0.2s ease;
 }
 
 .cateMenuItem:hover {
-  cursor: pointer;
   background-color: #d9d9d9;
+  cursor: pointer;
 }
 
 .cateMenuItemActive {
@@ -42,16 +43,16 @@
 }
 
 .tabContent {
-  float: left;
   position: relative;
+  z-index: 30;
+  float: left;
   width: 0;
-  overflow-y: scroll;
   height: 100%;
+  overflow-y: scroll;
   /* border: 1px solid #f7f7f7; */
   background-color: #fff;
   box-shadow: 2px 0 5px rgb(0 0 0 / 30%);
   transition: 0.2s width ease;
-  z-index: 30;
 }
 
 .tabContentActive {
@@ -95,8 +96,8 @@
 .gridTreeItem {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
   margin-bottom: 12px;
+  margin-left: 10px;
 }
 
 .inlineSubContent {
@@ -106,18 +107,18 @@
 .gridSubContent {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 6px;
+  padding: 8px 0;
   background-color: #f0f0f0;
   border-radius: 4px;
-  padding: 8px 0;
-  margin-top: 6px;
 }
 
 .cateMenuLk {
   display: inline-block;
-  color: #666;
-  transition: color 0.2s ease;
   padding-right: 12px;
+  color: #666;
   cursor: pointer;
+  transition: color 0.2s ease;
 }
 
 .cateMenuLk:hover {

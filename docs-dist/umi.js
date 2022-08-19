@@ -2442,7 +2442,7 @@
         var t = e.getBoundingClientRect(),
           n = t.x,
           r = t.y;
-        return { x: n, y: r };
+        return { x: n + window.scrollX, y: r + window.scrollY };
       }
       function _(e) {
         var t = M(e);
@@ -2484,7 +2484,12 @@
           C.current && (m(''), w(!1));
         },
         F = (e) => {
-          O.push({ x: e.pageX, y: e.pageY }), O.length > 3 && O.shift();
+          var t = e || window.event,
+            n = document.documentElement.scrollLeft || document.body.scrollLeft,
+            r = document.documentElement.scrollTop || document.body.scrollTop,
+            o = t.pageX || t.clientX + n,
+            a = t.pageY || t.clientY + r;
+          O.push({ x: o, y: a }), O.length > 3 && O.shift();
         },
         L = () => {
           x.current && clearTimeout(x.current);
@@ -5290,6 +5295,26 @@
                 'p',
                 null,
                 '\u9f20\u6807\u79fb\u5165\u5c55\u793a\u5bf9\u5e94\u7684\u5b50\u83dc\u5355',
+              ),
+              o.a.createElement(
+                'h2',
+                { id: '\u8bbe\u8ba1\u601d\u8def' },
+                o.a.createElement(
+                  a['AnchorLink'],
+                  { to: '#\u8bbe\u8ba1\u601d\u8def', 'aria-hidden': 'true', tabIndex: -1 },
+                  o.a.createElement('span', { className: 'icon icon-link' }),
+                ),
+                '\u8bbe\u8ba1\u601d\u8def',
+              ),
+              o.a.createElement(
+                'p',
+                null,
+                '\u8bf7\u53c2\u8003\u4ee5\u5f80\u6587\u7ae0 ',
+                o.a.createElement(
+                  a['Link'],
+                  { to: 'https://juejin.cn/post/7061905434352812040' },
+                  'react\u7248\u6a21\u62df\u4e9a\u9a6c\u900a\u4eba\u673a\u4ea4\u4e92\u83dc\u5355',
+                ),
               ),
               o.a.createElement(
                 'h2',
@@ -43579,6 +43604,11 @@
                     depth: 1,
                     value: 'MindMenu \u667a\u80fd\u83dc\u5355',
                     heading: 'mindmenu-\u667a\u80fd\u83dc\u5355',
+                  },
+                  {
+                    depth: 2,
+                    value: '\u8bbe\u8ba1\u601d\u8def',
+                    heading: '\u8bbe\u8ba1\u601d\u8def',
                   },
                   {
                     depth: 2,
