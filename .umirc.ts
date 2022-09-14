@@ -12,7 +12,7 @@ export default defineConfig({
   base: `/${repo}/`,
   publicPath: `/${repo}/`,
   navs: [
-    null,
+    null, // null 值代表保留约定式生成的导航，只做增量配置
     {
       title: 'GitHub',
       path: 'https://github.com/mamba-1024/mamba-design',

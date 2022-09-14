@@ -3,6 +3,7 @@ title: Loading
 nav:
   title: 组件
   path: /components
+  order: 0
 group:
   path: /components/Loading
   title: Loading
