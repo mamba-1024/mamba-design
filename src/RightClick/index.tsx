@@ -62,10 +62,10 @@ const RightClick: React.FC<IProps> = (props) => {
 
   useEffect(() => {
     if (id) {
-      document.getElementById(id).addEventListener('contextmenu', handleContextMenu);
+      document.getElementById(id)?.addEventListener('contextmenu', handleContextMenu);
       document.addEventListener('click', handleClick, true);
       return () => {
-        document.getElementById(id).removeEventListener('contextmenu', handleContextMenu);
+        document.getElementById(id)?.removeEventListener('contextmenu', handleContextMenu);
         document.removeEventListener('click', handleClick, true);
       };
     } else {
