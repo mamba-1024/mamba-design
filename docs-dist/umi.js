@@ -37811,7 +37811,7 @@
           previewerProps: {
             sources: {
               _: {
-                tsx: "import React, { useState, useMemo } from 'react';\nimport { Button, Col, message, Row, Space, Switch } from 'antd';\nimport { MouseBox, RightClick } from 'mamba-design';\n\n\nconst data: any[] = Array.from({ length: 20 }).map((ele, index) => ({\n  id: index,\n  name: `data-${index}`,\n}));\n\nconst rightMenus = [\n  {\n    title: '\u67e5\u770b',\n    onClick: (item) => {\n      message.info('\u70b9\u51fb\u4e86 \u67e5\u770b');\n      console.log('item: ', item);\n    },\n  },\n  {\n    title: '\u5220\u9664',\n    onClick: (item) => {\n      message.info('\u70b9\u51fb\u4e86 \u5220\u9664');\n      console.log('item: ', item);\n    },\n  },\n  {\n    title: '\u91cd\u547d\u540d',\n    onClick: (item) => {\n      message.info('\u70b9\u51fb\u4e86 \u91cd\u547d\u540d');\n      console.log('item: ', item);\n    },\n  },\n];\n\n\nexport default () => {\n  const [checked, setChecked] = useState([]);\n  const MouseBoxProps = {\n    root: '.mouse-choose-box',\n    target: '.mouse-choose-item',\n    onChange: (v) => setChecked(v)\n  };\n\n  const rightClickMenu = useMemo(() => {\n    if(checked.length > 1) {\n      return rightMenus.slice(0, 2)\n    } \n    return rightMenus\n  }, [checked.length])\n\n  return (\n    <div className=\"mouse-choose-box\" id=\"mouse-choose-box\" style={{background: '#ddd'}}>\n    <Row gutter={[16, 24]}>\n        {data.map((ele) => (\n          <Col\n            style={{\n              margin: '0 12px',\n              height: '40px',\n              lineHeight: '40px',\n              textAlign: 'center',\n            }}\n            data-click={true}\n            data-data={JSON.stringify(ele)}\n            span={6}\n            key={ele.id}\n            className=\"mouse-choose-item\"\n          >\n            {ele.name}\n          </Col>\n        ))}\n      </Row>\n    <MouseBox {...MouseBoxProps} />\n    <RightClick menus={rightClickMenu} id=\"mouse-choose-box\" />\n    </div>\n  )\n}\n",
+                tsx: "import React, { useState, useMemo } from 'react';\nimport { Button, Col, message, Row, Space, Switch } from 'antd';\nimport { MouseBox, RightClick } from 'mamba-design';\n\nconst data: any[] = Array.from({ length: 20 }).map((ele, index) => ({\n  id: index,\n  name: `data-${index}`,\n}));\n\nconst rightMenus = [\n  {\n    title: '\u67e5\u770b',\n    onClick: (item) => {\n      message.info('\u70b9\u51fb\u4e86 \u67e5\u770b');\n      console.log('item: ', item);\n    },\n  },\n  {\n    title: '\u5220\u9664',\n    onClick: (item) => {\n      message.info('\u70b9\u51fb\u4e86 \u5220\u9664');\n      console.log('item: ', item);\n    },\n  },\n  {\n    title: '\u91cd\u547d\u540d',\n    onClick: (item) => {\n      message.info('\u70b9\u51fb\u4e86 \u91cd\u547d\u540d');\n      console.log('item: ', item);\n    },\n  },\n];\n\nexport default () => {\n  const [checked, setChecked] = useState([]);\n  const MouseBoxProps = {\n    root: '.mouse-choose-box',\n    target: '.mouse-choose-item',\n    onChange: (v) => setChecked(v),\n  };\n\n  const rightClickMenu = useMemo(() => {\n    if (checked.length > 1) {\n      return rightMenus.slice(0, 2);\n    }\n    return rightMenus;\n  }, [checked.length]);\n\n  return (\n    <div className=\"mouse-choose-box\" id=\"mouse-choose-box\" style={{ background: '#ddd' }}>\n      <Row gutter={[16, 24]}>\n        {data.map((ele) => (\n          <Col\n            style={{\n              margin: '0 12px',\n              height: '40px',\n              lineHeight: '40px',\n              textAlign: 'center',\n            }}\n            data-click={true}\n            data-data={JSON.stringify(ele)}\n            span={6}\n            key={ele.id}\n            className=\"mouse-choose-item\"\n          >\n            {ele.name}\n          </Col>\n        ))}\n      </Row>\n      <MouseBox {...MouseBoxProps} />\n      <RightClick menus={rightClickMenu} id=\"mouse-choose-box\" />\n    </div>\n  );\n};",
               },
             },
             dependencies: {
@@ -39455,41 +39455,6 @@
         },
       },
     );
-  },
-  d0RZ: function (e, t, n) {
-    'use strict';
-    n.r(t);
-    var r = n('q1tI'),
-      a = n.n(r),
-      o = n('dEAq'),
-      i = a.a.memo((e) => {
-        e.demos;
-        return a.a.createElement(
-          a.a.Fragment,
-          null,
-          a.a.createElement(
-            'div',
-            { className: 'markdown' },
-            a.a.createElement('p', null, '121212 code'),
-          ),
-        );
-      });
-    t['default'] = (e) => {
-      var t = a.a.useContext(o['context']),
-        n = t.demos;
-      return (
-        a.a.useEffect(() => {
-          var t;
-          null !== e &&
-            void 0 !== e &&
-            null !== (t = e.location) &&
-            void 0 !== t &&
-            t.hash &&
-            o['AnchorLink'].scrollToAnchor(decodeURIComponent(e.location.hash.slice(1)));
-        }, []),
-        a.a.createElement(i, { demos: n })
-      );
-    };
   },
   dD9F: function (e, t, n) {
     var r = n('NykK'),
@@ -41836,6 +41801,95 @@
       );
     };
   },
+  hsaN: function (e, t, n) {
+    'use strict';
+    n.r(t);
+    var r = n('q1tI'),
+      a = n.n(r),
+      o = n('dEAq'),
+      i = n('6T1g'),
+      c = a.a.memo((e) => {
+        e.demos;
+        return a.a.createElement(
+          a.a.Fragment,
+          null,
+          a.a.createElement(
+            'div',
+            { className: 'markdown' },
+            a.a.createElement(
+              'blockquote',
+              null,
+              a.a.createElement(
+                'p',
+                null,
+                '\u672c\u6587\u73af\u5883\u914d\u7f6e\u5747\u5728 Mac \u73af\u5883\u4e0b',
+              ),
+            ),
+            a.a.createElement(
+              'h3',
+              { id: '\u6570\u636e\u5e93\u73af\u5883\u53d8\u91cf' },
+              a.a.createElement(
+                o['AnchorLink'],
+                {
+                  to: '#\u6570\u636e\u5e93\u73af\u5883\u53d8\u91cf',
+                  'aria-hidden': 'true',
+                  tabIndex: -1,
+                },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '\u6570\u636e\u5e93\u73af\u5883\u53d8\u91cf',
+            ),
+            a.a.createElement(i['a'], {
+              code: 'vim ~/.zshrc\n\n\x3c!-- \u65b0\u589e --\x3e\nexport PATH=${PATH}:/usr/local/mysql/bin/\n\n\x3c!-- \u751f\u6548 ~/.zshrc --\x3e\nsource ~/.zshrc',
+              lang: 'unknown',
+            }),
+            a.a.createElement(
+              'h3',
+              { id: '\u4fee\u6539\u672c\u5730\u6570\u636e\u7684\u5bc6\u7801' },
+              a.a.createElement(
+                o['AnchorLink'],
+                {
+                  to: '#\u4fee\u6539\u672c\u5730\u6570\u636e\u7684\u5bc6\u7801',
+                  'aria-hidden': 'true',
+                  tabIndex: -1,
+                },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '\u4fee\u6539\u672c\u5730\u6570\u636e\u7684\u5bc6\u7801',
+            ),
+            a.a.createElement(i['a'], {
+              code: '\x3c!-- \u4fee\u6539 root \u5bc6\u7801 --\x3e\n\n~ mysqladmin -u root -p password "\u65b0\u5bc6\u7801"',
+              lang: 'unknown',
+            }),
+            a.a.createElement(
+              'p',
+              null,
+              '\u7136\u540e\u76f4\u63a5\u4f7f\u7528 \u201c\u65b0\u5bc6\u7801\u201d \u767b\u5f55',
+            ),
+            a.a.createElement(i['a'], {
+              code: '~ mysql -u root -p\n\n~ Enter password: \u65b0\u5bc6\u7801',
+              lang: 'unknown',
+            }),
+          ),
+        );
+      });
+    t['default'] = (e) => {
+      var t = a.a.useContext(o['context']),
+        n = t.demos;
+      return (
+        a.a.useEffect(() => {
+          var t;
+          null !== e &&
+            void 0 !== e &&
+            null !== (t = e.location) &&
+            void 0 !== t &&
+            t.hash &&
+            o['AnchorLink'].scrollToAnchor(decodeURIComponent(e.location.hash.slice(1)));
+        }, []),
+        a.a.createElement(c, { demos: n })
+      );
+    };
+  },
   hwEL: function (e, t, n) {
     var r = n('I65O');
     r('patternMatch');
@@ -44082,7 +44136,7 @@
   },
   q3YX: function (e) {
     e.exports = JSON.parse(
-      '{"menus":{"en-US":{"/components":[{"title":"MindMenu","path":"/components/MindMenu","meta":{"order":0},"children":[]},{"title":"RightClick","path":"/components/RightClick","meta":{"order":1},"children":[]},{"title":"Loading","path":"/components/Loading","meta":{"order":2},"children":[]},{"title":"MouseBox","path":"/components/MouseBox","meta":{"order":4},"children":[]}],"*":[{"path":"/","title":"Hello mamba-design!","meta":{}}],"/guide":[{"title":"\u62ff\u6765\u5373\u7528","path":"/guide","meta":{"order":0},"children":[]},{"title":"\u5e38\u7528\u7684Git\u547d\u4ee4","path":"/guide/git-help","meta":{"order":1},"children":[]},{"title":"\u793a\u4f8b","path":"/guide/code","meta":{"order":2},"children":[]},{"title":"\u6b63\u5219\u8868\u8fbe\u5f0f","path":"/guide/regexp","meta":{"order":3},"children":[]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"\u7ec4\u4ef6","path":"/components","order":0},{"path":"/guide","title":"\u79ef\u7d2f","order":1},{"title":"GitHub","path":"https://github.com/mamba-1024/mamba-design"}]},"title":"mamba-design","logo":"https://raw.githubusercontent.com/mamba-1024/mamba-design/main/images/icon.png","mode":"site","repository":{"url":"https://github.com/mamba-1024/mamba-design","branch":"main"},"theme":{}}',
+      '{"menus":{"en-US":{"/components":[{"title":"MindMenu","path":"/components/MindMenu","meta":{"order":0},"children":[]},{"title":"RightClick","path":"/components/RightClick","meta":{"order":1},"children":[]},{"title":"Loading","path":"/components/Loading","meta":{"order":2},"children":[]},{"title":"MouseBox","path":"/components/MouseBox","meta":{"order":4},"children":[]}],"*":[{"path":"/","title":"Hello mamba-design!","meta":{}}],"/guide":[{"title":"\u62ff\u6765\u5373\u7528","path":"/guide","meta":{"order":0},"children":[]},{"title":"\u5e38\u7528\u7684Git\u547d\u4ee4","path":"/guide/git-help","meta":{"order":1},"children":[]},{"title":"\u65e5\u5e38\u914d\u7f6e","path":"/guide/env-config","meta":{"order":2},"children":[]},{"title":"\u6b63\u5219\u8868\u8fbe\u5f0f","path":"/guide/regexp","meta":{"order":3},"children":[]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"\u7ec4\u4ef6","path":"/components","order":0},{"path":"/guide","title":"\u79ef\u7d2f","order":1},{"title":"GitHub","path":"https://github.com/mamba-1024/mamba-design"}]},"title":"mamba-design","logo":"https://raw.githubusercontent.com/mamba-1024/mamba-design/main/images/icon.png","mode":"site","repository":{"url":"https://github.com/mamba-1024/mamba-design","branch":"main"},"theme":{}}',
     );
   },
   qA1w: function (e, t, n) {
@@ -46918,7 +46972,7 @@
               exact: !0,
               meta: {
                 filePath: 'src/MouseBox/index.md',
-                updatedTime: 1664436089386,
+                updatedTime: 1664436485e3,
                 componentName: 'MouseBox',
                 title: 'MouseBox',
                 nav: { title: '\u7ec4\u4ef6', path: '/components', order: 0 },
@@ -47058,18 +47112,29 @@
               title: '\u6b63\u5219\u8868\u8fbe\u5f0f - mamba-design',
             },
             {
-              path: '/guide/code',
-              component: n('d0RZ').default,
+              path: '/guide/env-config',
+              component: n('hsaN').default,
               exact: !0,
               meta: {
-                filePath: 'docs/guide/code.md',
-                updatedTime: 166314501e4,
-                title: '\u793a\u4f8b',
+                filePath: 'docs/guide/env-config.md',
+                updatedTime: 1665656159e3,
+                title: '\u65e5\u5e38\u914d\u7f6e',
                 nav: { path: '/guide', title: '\u79ef\u7d2f', order: 1 },
-                group: { path: '/guide/code', order: 2, title: '\u793a\u4f8b' },
-                slugs: [],
+                group: { path: '/guide/env-config', order: 2, title: '\u65e5\u5e38\u914d\u7f6e' },
+                slugs: [
+                  {
+                    depth: 3,
+                    value: '\u6570\u636e\u5e93\u73af\u5883\u53d8\u91cf',
+                    heading: '\u6570\u636e\u5e93\u73af\u5883\u53d8\u91cf',
+                  },
+                  {
+                    depth: 3,
+                    value: '\u4fee\u6539\u672c\u5730\u6570\u636e\u7684\u5bc6\u7801',
+                    heading: '\u4fee\u6539\u672c\u5730\u6570\u636e\u7684\u5bc6\u7801',
+                  },
+                ],
               },
-              title: '\u793a\u4f8b - mamba-design',
+              title: '\u65e5\u5e38\u914d\u7f6e - mamba-design',
             },
             {
               path: '/guide/git-help',
