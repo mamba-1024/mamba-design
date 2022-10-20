@@ -66,48 +66,6 @@ moment().isSame(Moment|String|Number|Date|Array, String);
   const weekDay = moment().day(); // 确定某天是周几
   ```
 
-## js 创建一个空数组
-
-- es6 方式
-  ```
-  Array.from(new Array(100).keys());
-  ```
-- ... 扩展运算符
-
-  ```
-  [...Array(100).keys()]
-
-  [...Array.from({ length: 100 }).keys()]
-  ```
-
-## 数组去重
-
-1. Array.from() + new Set
-
-```
-const arr1 = [1,2,3,4,2,3,5]
-Array.from(new Set(arr1))  === [...new Set(arr1)]
-```
-
-## Array 常用的 API
-
-1. `Array.prototype.unshift()` `unshift()` 方法将一个或多个元素添加到数组的开头，并返回该数组的新长度(该方法修改原有数组)。
-
-
-    ```
-    const array = [];
-    ```
-
-2. `Array.prototype.shift()` `shift()` 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度
-
-
-    ```
-    const array = [1,2,4,6];
-    const firstElement = array.shift(); // 得到数组的第一个元素吗，同时原数组array的被改变
-    console.log('firstElement: ', firstElement) // 1
-    console.log('array: ', array) // [2,4,6]
-    ```
-
 ## js 取余 %
 
 一个数字除以一个单位数字后取余 `%`
@@ -131,26 +89,6 @@ vertical-align: middle;
 ## webpack-dev-server
 
 保证服务可以通过 IP 访问到，可以在配置项`devServer`中增加 `host: '0.0.0.0'` 。
-
-## 将一个数组分成几个同等长度的数组
-
-```
-/*
- * 将一个数组分成几个同等长度的数组
- * array[分割的原数组]
- * size[每个子数组的长度]
- */
-
-function sliceArray(array, size) {
-  let result = [];
-  for (let x = 0; x < Math.ceil(array.length / size); x++) {
-    const start = x * size;
-    const end = start + size;
-    result.push(array.slice(start, end));
-  }
-  return result;
-}
-```
 
 ## react-native
 
@@ -374,13 +312,6 @@ child: {
   bottom: -6,  // 注意 bottom 设置为 -6 的时候，该元素已经超出了父元素的范围，
 }
 ```
-
-## mac 通过终端命令查看端口号
-
-命令 lsof -i tcp:port （port 替换成端口号，比如 8081）可以查看该端口被什么程序占用，并显示 PID，方便 KILL（kill pid）
-
-1. 查看端口被哪个程序占用 sudo lsof -i tcp:port 如： sudo lsof -i tcp:8081
-2. 看到进程的 PID，可以将进程杀死。 sudo kill -9 PID 如：sudo kill -9 6767
 
 ## 点击其他地方隐藏内容
 
