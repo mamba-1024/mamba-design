@@ -47217,7 +47217,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/index.md',
-                updatedTime: 1660790097e3,
+                updatedTime: 1666255846e3,
                 hero: {
                   title: 'mamba-design',
                   desc: '<div class="markdown"><p>mamba-design site example</p></div>',
@@ -47284,7 +47284,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/guide/array.md',
-                updatedTime: 1666255560475,
+                updatedTime: 1666255846e3,
                 title: '\u6570\u7ec4\u76f8\u5173',
                 nav: { path: '/guide', title: '\u79ef\u7d2f', order: 1 },
                 group: { path: '/guide/array', order: 5, title: '\u6570\u7ec4\u76f8\u5173' },
@@ -47326,7 +47326,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/guide/env-config.md',
-                updatedTime: 1665656159e3,
+                updatedTime: 1666255846e3,
                 title: '\u65e5\u5e38\u914d\u7f6e',
                 nav: { path: '/guide', title: '\u79ef\u7d2f', order: 1 },
                 group: { path: '/guide/env-config', order: 2, title: '\u65e5\u5e38\u914d\u7f6e' },
@@ -47450,7 +47450,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/guide/index.md',
-                updatedTime: 166314501e4,
+                updatedTime: 1666255846e3,
                 title: '\u62ff\u6765\u5373\u7528',
                 nav: { path: '/guide', title: '\u79ef\u7d2f', order: 1 },
                 group: { path: '/guide', order: 0, title: '\u62ff\u6765\u5373\u7528' },
