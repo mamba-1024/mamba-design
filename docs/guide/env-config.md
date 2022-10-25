@@ -6,8 +6,8 @@ nav:
   order: 1
 group:
   path: /guide/env-config
-  order: 2
-  title: 日常配置
+  order: 6
+  title: 配置
 ---
 
 > 本文环境配置均在 `Mac` 环境下
