@@ -1,5 +1,7 @@
 # mamba-design
 
+[![OSCS Status](https://www.oscs1024.com/platform/badge/mamba-1024/first-rule.svg?size=small)](https://www.oscs1024.com/project/mamba-1024/first-rule?ref=badge_small)
+
 ## Getting Started
 
 Install dependencies,
