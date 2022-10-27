@@ -5915,171 +5915,6 @@
             'div',
             { className: 'markdown' },
             a.a.createElement(
-              'h1',
-              { id: '\u62ff\u6765\u5373\u7528' },
-              a.a.createElement(
-                o['AnchorLink'],
-                { to: '#\u62ff\u6765\u5373\u7528', 'aria-hidden': 'true', tabIndex: -1 },
-                a.a.createElement('span', { className: 'icon icon-link' }),
-              ),
-              '\u62ff\u6765\u5373\u7528',
-            ),
-            a.a.createElement(
-              'h2',
-              { id: '\u5343\u5206\u4f4d\u683c\u5f0f\u5316' },
-              a.a.createElement(
-                o['AnchorLink'],
-                {
-                  to: '#\u5343\u5206\u4f4d\u683c\u5f0f\u5316',
-                  'aria-hidden': 'true',
-                  tabIndex: -1,
-                },
-                a.a.createElement('span', { className: 'icon icon-link' }),
-              ),
-              '\u5343\u5206\u4f4d\u683c\u5f0f\u5316',
-            ),
-            a.a.createElement(
-              'p',
-              null,
-              '\u901a\u5e38\u6211\u4eec\u524d\u7aef\u62ff\u5230\u540e\u7aef\u7ed9\u7684\u91d1\u989d\u6570\u636e\u90fd\u662f\u4fdd\u7559\u4e24\u4f4d\u5c0f\u6570\u7684\u5b57\u7b26\u4e32',
-            ),
-            a.a.createElement(
-              'p',
-              null,
-              '\u6b64\u65f6\u5c31\u9700\u8981\u6211\u4eec\u628a\u5b83\u8f6c\u4e3a\u5e02\u9762\u4e0a\u6807\u51c6\u7684\u5343\u5206\u4f4d\u663e\u793a\u683c\u5f0f',
-            ),
-            a.a.createElement(
-              'p',
-              null,
-              '\u4f8b\u5982\uff1a\u5c06\u91d1\u989d\u5b57\u7b26\u4e32\u8f6c\u5316\u4e3a\u5343\u5206\u7684\u9017\u53f7\u5206\u9694\u5f62\u5f0f "1,000,000.00"',
-            ),
-            a.a.createElement(
-              'h3',
-              { id: '\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f' },
-              a.a.createElement(
-                o['AnchorLink'],
-                {
-                  to: '#\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f',
-                  'aria-hidden': 'true',
-                  tabIndex: -1,
-                },
-                a.a.createElement('span', { className: 'icon icon-link' }),
-              ),
-              '\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f',
-            ),
-            a.a.createElement(i['a'], {
-              code: "function toThousands (price) {\n  return (price || 0).toString().replace(/(\\d)(?=(?:\\d{3})+$)/g, '$1,');\n}",
-              lang: 'unknown',
-            }),
-            a.a.createElement(
-              'h2',
-              { id: '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u5c0f\u6570' },
-              a.a.createElement(
-                o['AnchorLink'],
-                {
-                  to: '#\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u5c0f\u6570',
-                  'aria-hidden': 'true',
-                  tabIndex: -1,
-                },
-                a.a.createElement('span', { className: 'icon icon-link' }),
-              ),
-              '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u5c0f\u6570',
-            ),
-            a.a.createElement(i['a'], {
-              code: 'const discount = Math.round((lowPrice / highPrice) * 100) / 10;\n  discount.toFixed(1);',
-              lang: 'unknown',
-            }),
-            a.a.createElement(
-              'h2',
-              { id: 'momentjs-api' },
-              a.a.createElement(
-                o['AnchorLink'],
-                { to: '#momentjs-api', 'aria-hidden': 'true', tabIndex: -1 },
-                a.a.createElement('span', { className: 'icon icon-link' }),
-              ),
-              'moment.js API',
-            ),
-            a.a.createElement(
-              'p',
-              null,
-              '\u5b98\u65b9\u5730\u5740 ',
-              a.a.createElement(
-                o['Link'],
-                { to: 'http://momentjs.cn/docs/#/query/is-same/' },
-                'isSame',
-              ),
-            ),
-            a.a.createElement('p', null, '\u4f7f\u7528\u65b9\u5f0f'),
-            a.a.createElement(i['a'], {
-              code: 'moment().isSame(Moment|String|Number|Date|Array, String);',
-              lang: 'unknown',
-            }),
-            a.a.createElement(
-              'p',
-              null,
-              '\u5f53\u5305\u542b\u7b2c\u4e8c\u4e2a\u53c2\u6570\u65f6\uff0c\u5219\u5b83\u5c06\u4f1a\u5339\u914d\u6240\u6709\u7b49\u4e8e\u6216\u66f4\u5927\u7684\u5355\u4f4d\u3002 \u4f20\u5165 month \u5c06\u4f1a\u68c0\u67e5 month \u548c year\u3002 \u4f20\u5165 day \u5c06\u4f1a\u68c0\u67e5 day\u3001month \u548c year',
-            ),
-            a.a.createElement(
-              'ul',
-              null,
-              a.a.createElement(
-                'li',
-                null,
-                a.a.createElement('p', null, a.a.createElement('code', null, 'isSame')),
-                a.a.createElement(i['a'], {
-                  code: "const isToday = moment(time).isSame(moment(), 'day');",
-                  lang: 'unknown',
-                }),
-              ),
-              a.a.createElement(
-                'li',
-                null,
-                a.a.createElement('p', null, a.a.createElement('code', null, 'isAfter')),
-                a.a.createElement(i['a'], {
-                  code: "const isAfter = moment(time).isAfter(moment(), 'day');",
-                  lang: 'unknown',
-                }),
-              ),
-              a.a.createElement(
-                'li',
-                null,
-                a.a.createElement('p', null, a.a.createElement('code', null, 'moment().date()')),
-                a.a.createElement(i['a'], {
-                  code: 'const dayInMonth = moment().date(); // \u83b7\u53d6\u5f53\u5929\u65e5\u671f\uff08\u51e0\u53f7\uff09',
-                  lang: 'unknown',
-                }),
-              ),
-              a.a.createElement(
-                'li',
-                null,
-                a.a.createElement('p', null, a.a.createElement('code', null, 'moment().day()')),
-                a.a.createElement(i['a'], {
-                  code: 'const weekDay = moment().day(); // \u786e\u5b9a\u67d0\u5929\u662f\u5468\u51e0',
-                  lang: 'unknown',
-                }),
-              ),
-            ),
-            a.a.createElement(
-              'h2',
-              { id: 'js-\u53d6\u4f59-' },
-              a.a.createElement(
-                o['AnchorLink'],
-                { to: '#js-\u53d6\u4f59-', 'aria-hidden': 'true', tabIndex: -1 },
-                a.a.createElement('span', { className: 'icon icon-link' }),
-              ),
-              'js \u53d6\u4f59 %',
-            ),
-            a.a.createElement(
-              'p',
-              null,
-              '\u4e00\u4e2a\u6570\u5b57\u9664\u4ee5\u4e00\u4e2a\u5355\u4f4d\u6570\u5b57\u540e\u53d6\u4f59 ',
-              a.a.createElement('code', null, '%'),
-            ),
-            a.a.createElement(i['a'], {
-              code: 'const otherLength = 36 % 7 ; // 1',
-              lang: 'unknown',
-            }),
-            a.a.createElement(
               'h2',
               { id: 'css' },
               a.a.createElement(
@@ -13718,6 +13553,281 @@
             ? 'Arguments'
             : r;
         };
+  },
+  EnbZ: function (e, t, n) {
+    'use strict';
+    n.r(t);
+    var r = n('q1tI'),
+      a = n.n(r),
+      o = n('dEAq'),
+      i = n('H1Ra'),
+      c = a.a.memo((e) => {
+        e.demos;
+        return a.a.createElement(
+          a.a.Fragment,
+          null,
+          a.a.createElement(
+            'div',
+            { className: 'markdown' },
+            a.a.createElement(
+              'p',
+              null,
+              '\u7528\u6700\u5c11\u5f97\u4ee3\u7801\uff0c\u5b9e\u73b0\u5e38\u89c1\u7684\u903b\u8f91',
+            ),
+            a.a.createElement(
+              'h2',
+              {
+                id: '\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f\u5b9e\u73b0\u5343\u5206\u4f4d\u683c\u5f0f\u5316',
+              },
+              a.a.createElement(
+                o['AnchorLink'],
+                {
+                  to: '#\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f\u5b9e\u73b0\u5343\u5206\u4f4d\u683c\u5f0f\u5316',
+                  'aria-hidden': 'true',
+                  tabIndex: -1,
+                },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f\u5b9e\u73b0\u5343\u5206\u4f4d\u683c\u5f0f\u5316',
+            ),
+            a.a.createElement(
+              'p',
+              null,
+              '\u901a\u5e38\u6211\u4eec\u524d\u7aef\u62ff\u5230\u540e\u7aef\u7ed9\u7684\u91d1\u989d\u6570\u636e\u90fd\u662f\u4fdd\u7559\u4e24\u4f4d\u5c0f\u6570\u7684\u5b57\u7b26\u4e32',
+            ),
+            a.a.createElement(
+              'p',
+              null,
+              '\u6b64\u65f6\u5c31\u9700\u8981\u6211\u4eec\u628a\u5b83\u8f6c\u4e3a\u5e02\u9762\u4e0a\u6807\u51c6\u7684\u5343\u5206\u4f4d\u663e\u793a\u683c\u5f0f',
+            ),
+            a.a.createElement(
+              'p',
+              null,
+              '\u4f8b\u5982\uff1a\u5c06\u91d1\u989d\u5b57\u7b26\u4e32\u8f6c\u5316\u4e3a\u5343\u5206\u7684\u9017\u53f7\u5206\u9694\u5f62\u5f0f "1,000,000.00"',
+            ),
+            a.a.createElement(i['a'], {
+              code: "const toThousands = (price) => (price || 0).toString().replace(/(\\d)(?=(?:\\d{3})+$)/g, '$1,');",
+              lang: 'unknown',
+            }),
+            a.a.createElement(
+              'h2',
+              { id: '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u6709\u6548\u6570\u5b57' },
+              a.a.createElement(
+                o['AnchorLink'],
+                {
+                  to: '#\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u6709\u6548\u6570\u5b57',
+                  'aria-hidden': 'true',
+                  tabIndex: -1,
+                },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u6709\u6548\u6570\u5b57',
+            ),
+            a.a.createElement(i['a'], {
+              code: 'const round = (number) => Math.round(number * 10) / 10;',
+              lang: 'unknown',
+            }),
+            a.a.createElement(
+              'h2',
+              {
+                id: '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u6570\u5b57\u6ca1\u6709\u5c0f\u6570\u9700\u8981\u8865-0\u4f8b\u598210',
+              },
+              a.a.createElement(
+                o['AnchorLink'],
+                {
+                  to: '#\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u6570\u5b57\u6ca1\u6709\u5c0f\u6570\u9700\u8981\u8865-0\u4f8b\u598210',
+                  'aria-hidden': 'true',
+                  tabIndex: -1,
+                },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u6570\u5b57\uff0c\u6ca1\u6709\u5c0f\u6570\u9700\u8981\u8865 0\uff0c\u4f8b\u5982\uff1a1.0',
+            ),
+            a.a.createElement(i['a'], {
+              code: 'const round = (number) => (Math.round(number * 10) / 10).toFixed(1);',
+              lang: 'unknown',
+            }),
+            a.a.createElement(
+              'h2',
+              { id: '\u56db\u820d\u4e94\u5165\u4fdd\u7559-n-\u4f4d\u6709\u6548\u6570\u5b57' },
+              a.a.createElement(
+                o['AnchorLink'],
+                {
+                  to: '#\u56db\u820d\u4e94\u5165\u4fdd\u7559-n-\u4f4d\u6709\u6548\u6570\u5b57',
+                  'aria-hidden': 'true',
+                  tabIndex: -1,
+                },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '\u56db\u820d\u4e94\u5165\u4fdd\u7559 n \u4f4d\u6709\u6548\u6570\u5b57',
+            ),
+            a.a.createElement(i['a'], {
+              code: 'const round = (number, n) => Math.round(number * Math.pow(10, n)) / Math.pow(10, n);',
+              lang: 'unknown',
+            }),
+            a.a.createElement(
+              'h2',
+              {
+                id: '\u56db\u820d\u4e94\u5165\u4fdd\u7559-n-\u4f4d\u6570\u5b57\u6ca1\u6709\u5c0f\u6570\u9700\u8981\u8865-0\u4f8b\u598211201000',
+              },
+              a.a.createElement(
+                o['AnchorLink'],
+                {
+                  to: '#\u56db\u820d\u4e94\u5165\u4fdd\u7559-n-\u4f4d\u6570\u5b57\u6ca1\u6709\u5c0f\u6570\u9700\u8981\u8865-0\u4f8b\u598211201000',
+                  'aria-hidden': 'true',
+                  tabIndex: -1,
+                },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '\u56db\u820d\u4e94\u5165\u4fdd\u7559 n \u4f4d\u6570\u5b57\uff0c\u6ca1\u6709\u5c0f\u6570\u9700\u8981\u8865 0\uff0c\u4f8b\u5982\uff1a1.120\u30011.000',
+            ),
+            a.a.createElement(i['a'], {
+              code: 'const round = (number, n) => (Math.round(number * Math.pow(10, n)) / Math.pow(10, n)).toFixed(n);',
+              lang: 'unknown',
+            }),
+            a.a.createElement(
+              'h2',
+              { id: 'momentjs-api' },
+              a.a.createElement(
+                o['AnchorLink'],
+                { to: '#momentjs-api', 'aria-hidden': 'true', tabIndex: -1 },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              'moment.js API',
+            ),
+            a.a.createElement(
+              'p',
+              null,
+              '\u5b98\u65b9\u5730\u5740 ',
+              a.a.createElement(
+                o['Link'],
+                { to: 'http://momentjs.cn/docs/#/query/is-same/' },
+                'isSame',
+              ),
+            ),
+            a.a.createElement('p', null, '\u4f7f\u7528\u65b9\u5f0f'),
+            a.a.createElement(i['a'], {
+              code: 'moment().isSame(Moment|String|Number|Date|Array, String);',
+              lang: 'unknown',
+            }),
+            a.a.createElement(
+              'p',
+              null,
+              '\u5f53\u5305\u542b\u7b2c\u4e8c\u4e2a\u53c2\u6570\u65f6\uff0c\u5219\u5b83\u5c06\u4f1a\u5339\u914d\u6240\u6709\u7b49\u4e8e\u6216\u66f4\u5927\u7684\u5355\u4f4d\u3002 \u4f20\u5165 month \u5c06\u4f1a\u68c0\u67e5 month \u548c year\u3002 \u4f20\u5165 day \u5c06\u4f1a\u68c0\u67e5 day\u3001month \u548c year',
+            ),
+            a.a.createElement(
+              'ul',
+              null,
+              a.a.createElement(
+                'li',
+                null,
+                a.a.createElement('p', null, a.a.createElement('code', null, 'isSame')),
+                a.a.createElement(i['a'], {
+                  code: "const isToday = moment(time).isSame(moment(), 'day');",
+                  lang: 'unknown',
+                }),
+              ),
+              a.a.createElement(
+                'li',
+                null,
+                a.a.createElement('p', null, a.a.createElement('code', null, 'isAfter')),
+                a.a.createElement(i['a'], {
+                  code: "const isAfter = moment(time).isAfter(moment(), 'day');",
+                  lang: 'unknown',
+                }),
+              ),
+              a.a.createElement(
+                'li',
+                null,
+                a.a.createElement('p', null, a.a.createElement('code', null, 'moment().date()')),
+                a.a.createElement(i['a'], {
+                  code: 'const dayInMonth = moment().date(); // \u83b7\u53d6\u5f53\u5929\u65e5\u671f\uff08\u51e0\u53f7\uff09',
+                  lang: 'unknown',
+                }),
+              ),
+              a.a.createElement(
+                'li',
+                null,
+                a.a.createElement('p', null, a.a.createElement('code', null, 'moment().day()')),
+                a.a.createElement(i['a'], {
+                  code: 'const weekDay = moment().day(); // \u786e\u5b9a\u67d0\u5929\u662f\u5468\u51e0',
+                  lang: 'unknown',
+                }),
+              ),
+            ),
+            a.a.createElement(
+              'h2',
+              { id: 'js-\u53d6\u4f59-' },
+              a.a.createElement(
+                o['AnchorLink'],
+                { to: '#js-\u53d6\u4f59-', 'aria-hidden': 'true', tabIndex: -1 },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              'js \u53d6\u4f59 %',
+            ),
+            a.a.createElement(
+              'p',
+              null,
+              '\u4e00\u4e2a\u6570\u5b57\u9664\u4ee5\u4e00\u4e2a\u5355\u4f4d\u6570\u5b57\u540e\u53d6\u4f59 ',
+              a.a.createElement('code', null, '%'),
+            ),
+            a.a.createElement(i['a'], {
+              code: 'const remainder = (number, unit) => number % unit;\n\nremainder(36, 5) // 1',
+              lang: 'unknown',
+            }),
+            a.a.createElement(
+              'h2',
+              {
+                id: '\u63a8\u8350\u4e24\u4e2a\u5730\u5740\u53ef\u4ee5\u76f4\u63a5\u4f7f\u7528\u7684\u7b80\u7ea6\u4ee3\u7801',
+              },
+              a.a.createElement(
+                o['AnchorLink'],
+                {
+                  to: '#\u63a8\u8350\u4e24\u4e2a\u5730\u5740\u53ef\u4ee5\u76f4\u63a5\u4f7f\u7528\u7684\u7b80\u7ea6\u4ee3\u7801',
+                  'aria-hidden': 'true',
+                  tabIndex: -1,
+                },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '\u63a8\u8350\u4e24\u4e2a\u5730\u5740\u53ef\u4ee5\u76f4\u63a5\u4f7f\u7528\u7684\u7b80\u7ea6\u4ee3\u7801',
+            ),
+            a.a.createElement(
+              'ul',
+              null,
+              a.a.createElement(
+                'li',
+                null,
+                a.a.createElement(o['Link'], { to: 'https://1loc.dev/' }, '1loc'),
+              ),
+              a.a.createElement(
+                'li',
+                null,
+                a.a.createElement(
+                  o['Link'],
+                  { to: 'https://www.30secondsofcode.org/' },
+                  'seconds of code',
+                ),
+              ),
+            ),
+          ),
+        );
+      });
+    t['default'] = (e) => {
+      var t = a.a.useContext(o['context']),
+        n = t.demos;
+      return (
+        a.a.useEffect(() => {
+          var t;
+          null !== e &&
+            void 0 !== e &&
+            null !== (t = e.location) &&
+            void 0 !== t &&
+            t.hash &&
+            o['AnchorLink'].scrollToAnchor(decodeURIComponent(e.location.hash.slice(1)));
+        }, []),
+        a.a.createElement(c, { demos: n })
+      );
+    };
   },
   EpBk: function (e, t) {
     function n(e) {
@@ -37400,7 +37510,7 @@
   },
   q3YX: function (e) {
     e.exports = JSON.parse(
-      '{"menus":{"en-US":{"/components":[{"title":"MindMenu","path":"/components/MindMenu","meta":{"order":0},"children":[]},{"title":"RightClick","path":"/components/RightClick","meta":{"order":1},"children":[]},{"title":"Loading","path":"/components/Loading","meta":{"order":2},"children":[]},{"title":"MouseBox","path":"/components/MouseBox","meta":{"order":4},"children":[]}],"*":[{"path":"/","title":"Hello mamba-design!","meta":{}}],"/guide":[{"title":"\u62ff\u6765\u5373\u7528","path":"/guide","meta":{"order":0},"children":[]},{"title":"\u5e38\u7528\u7684Git\u547d\u4ee4","path":"/guide/git-help","meta":{"order":1},"children":[]},{"title":"\u6b63\u5219\u8868\u8fbe\u5f0f","path":"/guide/regexp","meta":{"order":3},"children":[]},{"title":"\u6570\u7ec4\u76f8\u5173","path":"/guide/array","meta":{"order":5},"children":[]},{"title":"\u914d\u7f6e","path":"/guide/env-config","meta":{"order":6},"children":[{"path":"/guide/env-config","title":"\u65e5\u5e38\u914d\u7f6e","meta":{}},{"path":"/guide/env-config/husky-config","title":"Husky(\u54c8\u58eb\u5947\ud83d\udc36 )","meta":{}}]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"\u7ec4\u4ef6","path":"/components","order":0},{"path":"/guide","title":"\u79ef\u7d2f","order":1},{"title":"GitHub","path":"https://github.com/mamba-1024/mamba-design"}]},"title":"mamba-design","logo":"https://raw.githubusercontent.com/mamba-1024/mamba-design/main/images/icon.png","mode":"site","repository":{"url":"https://github.com/mamba-1024/mamba-design","branch":"main"},"theme":{}}',
+      '{"menus":{"en-US":{"/components":[{"title":"MindMenu","path":"/components/MindMenu","meta":{"order":0},"children":[]},{"title":"RightClick","path":"/components/RightClick","meta":{"order":1},"children":[]},{"title":"Loading","path":"/components/Loading","meta":{"order":2},"children":[]},{"title":"MouseBox","path":"/components/MouseBox","meta":{"order":4},"children":[]}],"*":[{"path":"/","title":"Hello mamba-design!","meta":{}}],"/guide":[{"title":"\u62ff\u6765\u5373\u7528","path":"/guide","meta":{"order":0},"children":[]},{"title":"\u5e38\u7528\u7684Git\u547d\u4ee4","path":"/guide/git-help","meta":{"order":1},"children":[]},{"title":"\u6b63\u5219\u8868\u8fbe\u5f0f","path":"/guide/regexp","meta":{"order":3},"children":[]},{"title":"\u6570\u7ec4\u76f8\u5173","path":"/guide/array","meta":{"order":5},"children":[]},{"title":"\u914d\u7f6e","path":"/guide/env-config","meta":{"order":6},"children":[{"path":"/guide/env-config","title":"\u65e5\u5e38\u914d\u7f6e","meta":{}},{"path":"/guide/env-config/husky-config","title":"Husky(\u54c8\u58eb\u5947\ud83d\udc36 )","meta":{}}]},{"title":"\u4e00\u884c\u4ee3\u7801","path":"/guide/1l-code","meta":{"order":8},"children":[]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"\u7ec4\u4ef6","path":"/components","order":0},{"path":"/guide","title":"\u79ef\u7d2f","order":1},{"title":"GitHub","path":"https://github.com/mamba-1024/mamba-design"}]},"title":"mamba-design","logo":"https://raw.githubusercontent.com/mamba-1024/mamba-design/main/images/icon.png","mode":"site","repository":{"url":"https://github.com/mamba-1024/mamba-design","branch":"main"},"theme":{}}',
     );
   },
   qA1w: function (e, t, n) {
@@ -39343,6 +39453,64 @@
               title: 'Hello mamba-design! - mamba-design',
             },
             {
+              path: '/guide/1l-code',
+              component: n('EnbZ').default,
+              exact: !0,
+              meta: {
+                filePath: 'docs/guide/1l-code.md',
+                updatedTime: 1666855122912,
+                title: '\u4e00\u884c\u4ee3\u7801',
+                nav: { path: '/guide', title: '\u79ef\u7d2f', order: 1 },
+                group: { path: '/guide/1l-code', order: 8, title: '\u4e00\u884c\u4ee3\u7801' },
+                slugs: [
+                  {
+                    depth: 2,
+                    value:
+                      '\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f\u5b9e\u73b0\u5343\u5206\u4f4d\u683c\u5f0f\u5316',
+                    heading:
+                      '\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f\u5b9e\u73b0\u5343\u5206\u4f4d\u683c\u5f0f\u5316',
+                  },
+                  {
+                    depth: 2,
+                    value:
+                      '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u6709\u6548\u6570\u5b57',
+                    heading:
+                      '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u6709\u6548\u6570\u5b57',
+                  },
+                  {
+                    depth: 2,
+                    value:
+                      '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u6570\u5b57\uff0c\u6ca1\u6709\u5c0f\u6570\u9700\u8981\u8865 0\uff0c\u4f8b\u5982\uff1a1.0',
+                    heading:
+                      '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u6570\u5b57\u6ca1\u6709\u5c0f\u6570\u9700\u8981\u8865-0\u4f8b\u598210',
+                  },
+                  {
+                    depth: 2,
+                    value: '\u56db\u820d\u4e94\u5165\u4fdd\u7559 n \u4f4d\u6709\u6548\u6570\u5b57',
+                    heading:
+                      '\u56db\u820d\u4e94\u5165\u4fdd\u7559-n-\u4f4d\u6709\u6548\u6570\u5b57',
+                  },
+                  {
+                    depth: 2,
+                    value:
+                      '\u56db\u820d\u4e94\u5165\u4fdd\u7559 n \u4f4d\u6570\u5b57\uff0c\u6ca1\u6709\u5c0f\u6570\u9700\u8981\u8865 0\uff0c\u4f8b\u5982\uff1a1.120\u30011.000',
+                    heading:
+                      '\u56db\u820d\u4e94\u5165\u4fdd\u7559-n-\u4f4d\u6570\u5b57\u6ca1\u6709\u5c0f\u6570\u9700\u8981\u8865-0\u4f8b\u598211201000',
+                  },
+                  { depth: 2, value: 'moment.js API', heading: 'momentjs-api' },
+                  { depth: 2, value: 'js \u53d6\u4f59 %', heading: 'js-\u53d6\u4f59-' },
+                  {
+                    depth: 2,
+                    value:
+                      '\u63a8\u8350\u4e24\u4e2a\u5730\u5740\u53ef\u4ee5\u76f4\u63a5\u4f7f\u7528\u7684\u7b80\u7ea6\u4ee3\u7801',
+                    heading:
+                      '\u63a8\u8350\u4e24\u4e2a\u5730\u5740\u53ef\u4ee5\u76f4\u63a5\u4f7f\u7528\u7684\u7b80\u7ea6\u4ee3\u7801',
+                  },
+                ],
+              },
+              title: '\u4e00\u884c\u4ee3\u7801 - mamba-design',
+            },
+            {
               path: '/guide/regexp/reg-exp',
               component: n('p5q+').default,
               exact: !0,
@@ -39583,28 +39751,6 @@
                 nav: { path: '/guide', title: '\u79ef\u7d2f', order: 1 },
                 group: { path: '/guide', order: 0, title: '\u62ff\u6765\u5373\u7528' },
                 slugs: [
-                  {
-                    depth: 1,
-                    value: '\u62ff\u6765\u5373\u7528',
-                    heading: '\u62ff\u6765\u5373\u7528',
-                  },
-                  {
-                    depth: 2,
-                    value: '\u5343\u5206\u4f4d\u683c\u5f0f\u5316',
-                    heading: '\u5343\u5206\u4f4d\u683c\u5f0f\u5316',
-                  },
-                  {
-                    depth: 3,
-                    value: '\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f',
-                    heading: '\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f',
-                  },
-                  {
-                    depth: 2,
-                    value: '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u5c0f\u6570',
-                    heading: '\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e00\u4f4d\u5c0f\u6570',
-                  },
-                  { depth: 2, value: 'moment.js API', heading: 'momentjs-api' },
-                  { depth: 2, value: 'js \u53d6\u4f59 %', heading: 'js-\u53d6\u4f59-' },
                   { depth: 2, value: 'CSS', heading: 'css' },
                   { depth: 2, value: 'webpack-dev-server', heading: 'webpack-dev-server' },
                   { depth: 2, value: 'react-native', heading: 'react-native' },
