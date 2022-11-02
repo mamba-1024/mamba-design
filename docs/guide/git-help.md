@@ -195,3 +195,23 @@ Update README.md 信息合并
 ```
 npm view *** versions
 ```
+
+## git 中 SSL certificate problem: unable to get local issuer certificate 的解决方案
+
+### 问题原因
+
+通过`HTTPS`访问`Git`远程仓库的时候，如果服务器上的`SSL`证书未经过第三方机构认证，`git`就会报错。原因是因为未知的没有签署过的证书意味着可能存在很大的风险
+
+### 如何解决
+
+将**系统当前用户**范围 `git` 中的 `sslverify` 关掉
+
+```
+git config --global http.sslverify false
+```
+
+或者是将**全局所有用户**范围 `git` 中的 `sslverify` 关掉
+
+```
+git config --system http.sslverify false
+```
