@@ -22204,18 +22204,18 @@
             a.a.createElement(
               'h2',
               {
-                id: 'git\u4e2d-ssl-certificate-problem-unable-to-get-local-issuer-certificate-\u7684\u89e3\u51b3\u65b9\u6848',
+                id: 'git-\u4e2d-ssl-certificate-problem-unable-to-get-local-issuer-certificate-\u7684\u89e3\u51b3\u65b9\u6848',
               },
               a.a.createElement(
                 o['AnchorLink'],
                 {
-                  to: '#git\u4e2d-ssl-certificate-problem-unable-to-get-local-issuer-certificate-\u7684\u89e3\u51b3\u65b9\u6848',
+                  to: '#git-\u4e2d-ssl-certificate-problem-unable-to-get-local-issuer-certificate-\u7684\u89e3\u51b3\u65b9\u6848',
                   'aria-hidden': 'true',
                   tabIndex: -1,
                 },
                 a.a.createElement('span', { className: 'icon icon-link' }),
               ),
-              'git\u4e2d SSL certificate problem: unable to get local issuer certificate \u7684\u89e3\u51b3\u65b9\u6848',
+              'git \u4e2d SSL certificate problem: unable to get local issuer certificate \u7684\u89e3\u51b3\u65b9\u6848',
             ),
             a.a.createElement(
               'h3',
@@ -39699,7 +39699,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/guide/git-help.md',
-                updatedTime: 166314501e4,
+                updatedTime: 1667352405e3,
                 title: '\u5e38\u7528\u7684Git\u547d\u4ee4',
                 nav: { path: '/guide', title: '\u79ef\u7d2f', order: 1 },
                 group: {
@@ -39785,9 +39785,9 @@
                   {
                     depth: 2,
                     value:
-                      'git\u4e2d SSL certificate problem: unable to get local issuer certificate \u7684\u89e3\u51b3\u65b9\u6848',
+                      'git \u4e2d SSL certificate problem: unable to get local issuer certificate \u7684\u89e3\u51b3\u65b9\u6848',
                     heading:
-                      'git\u4e2d-ssl-certificate-problem-unable-to-get-local-issuer-certificate-\u7684\u89e3\u51b3\u65b9\u6848',
+                      'git-\u4e2d-ssl-certificate-problem-unable-to-get-local-issuer-certificate-\u7684\u89e3\u51b3\u65b9\u6848',
                   },
                   {
                     depth: 3,
