@@ -5,10 +5,11 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import styles from './style.module.less';
 
-import { IProps, MenuItem, ContextDataItem } from './interface';
+import { IProps, MenuItem } from './interface';
 
 const RightClick: React.FC<IProps> = (props) => {
-  const { menus, id, onContextMenuCallback } = props;
+  const { menus, children, data, onContextMenu, id } = props;
+  const key = JSON.stringify(data || new Date().valueOf());
 
   const [style, setStyle] = useState<React.CSSProperties>({
     position: 'fixed',
@@ -19,18 +20,11 @@ const RightClick: React.FC<IProps> = (props) => {
   });
 
   const rightClickRef = useRef<any>();
-  const rightClickDataRef = useRef<ContextDataItem>();
 
   const handleContextMenu = useCallback(
     (event: any) => {
       event.preventDefault();
-      const isCategoryMenu = event.target.dataset.click;
-      if (isCategoryMenu === 'false' || isCategoryMenu === undefined) return;
-      const data = JSON.parse(event.target.dataset.data);
-      onContextMenuCallback?.(data);
-      console.log('handleContextMenu: data ', isCategoryMenu, data);
-
-      rightClickDataRef.current = data;
+      onContextMenu?.(data);
 
       // 获取点击的位置
       let { clientX, clientY } = event;
@@ -50,7 +44,7 @@ const RightClick: React.FC<IProps> = (props) => {
       clientY = top ? clientY + 6 : clientY - rightClickRefH - 6;
       setStyle((pre) => ({ ...pre, zIndex: 2, opacity: 1, left: clientX, top: clientY }));
     },
-    [onContextMenuCallback],
+    [data, onContextMenu],
   );
 
   const handleClick = (event: any) => {
@@ -62,34 +56,37 @@ const RightClick: React.FC<IProps> = (props) => {
 
   useEffect(() => {
     if (id) {
-      document.getElementById(id)?.addEventListener('contextmenu', handleContextMenu);
+      document.getElementById(id)?.addEventListener('contextmenu', handleContextMenu, true);
       document.addEventListener('click', handleClick, true);
       return () => {
-        document.getElementById(id)?.removeEventListener('contextmenu', handleContextMenu);
+        document.getElementById(id)?.removeEventListener('contextmenu', handleContextMenu, true);
         document.removeEventListener('click', handleClick, true);
       };
-    } else {
-      document.addEventListener('contextmenu', handleContextMenu);
+    } else if (children) {
       document.addEventListener('click', handleClick, true);
       return () => {
-        document.removeEventListener('contextmenu', handleContextMenu);
         document.removeEventListener('click', handleClick, true);
       };
     }
-  }, [handleContextMenu, id]);
+  }, [children, id, handleContextMenu]);
 
   const handleMenu = (item: MenuItem) => {
     // 回传点击的数据
-    item.onClick(rightClickDataRef.current);
+    item.onClick(data);
     // 隐藏菜单
     setStyle((pre) => ({ ...pre, zIndex: -100, opacity: 0 }));
   };
 
   const ContextMenu = (
-    <div className={`${styles.rightContextMenu} ${id}`} style={style} ref={rightClickRef}>
-      {menus.map((ele, index) => (
+    <div
+      key={`${key}-item`}
+      className={`${styles.rightContextMenu} ${id}`}
+      style={style}
+      ref={rightClickRef}
+    >
+      {menus.map((ele) => (
         <div
-          key={`${ele.title}-${index}`}
+          key={`${JSON.stringify(ele)}-rightContext`}
           onClick={() => handleMenu(ele)}
           className={styles.rightContextMenuItem}
         >
@@ -99,7 +96,12 @@ const RightClick: React.FC<IProps> = (props) => {
     </div>
   );
 
-  return ContextMenu;
+  return (
+    <React.Fragment key={`${key}-item-wrap`}>
+      {children && React.cloneElement(children as any, { onContextMenu: handleContextMenu })}
+      {ContextMenu}
+    </React.Fragment>
+  );
 };
 
 export default React.memo(RightClick);

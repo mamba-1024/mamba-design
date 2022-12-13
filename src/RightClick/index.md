@@ -16,7 +16,7 @@ group:
 
 ## 设计思路
 
-组件加载的时候为容器组件挂载 `contextmenu` 事件，渲染的时候为有点点击区域增加 `data-click` 和 `data-data` 的属性，其中 `data-click` 是控制该区域是否响应右键事件（弹出右键菜单），`data-data`为该点击区域的数据值，会透传到菜单的事件中，用于业务逻辑处理。
+将被右键点击元素使用该组件进行包裹，组件加载的时候为组件挂载 `contextmenu` 事件，会透传到菜单的事件中，用于业务逻辑处理。
 
 右键菜单是通过固定定位的方式显示在右键点击区域。
 
@@ -28,7 +28,7 @@ group:
 
 ```tsx
 import React, { useState } from 'react';
-import { Button, Col, message, Row, Space, Switch } from 'antd';
+import { Button, Col, message, Row, Space, Switch, Divider } from 'antd';
 import { RightClick } from 'mamba-design';
 import { ContextDataItem } from './interface.ts';
 
@@ -36,22 +36,19 @@ const rightMenus = [
   {
     title: '查看',
     onClick: (item) => {
-      message.info('点击了 查看');
-      console.log('item: ', item);
+      message.info(`右键 ${item.name}，点击了 查看`);
     },
   },
   {
     title: '重命名',
     onClick: (item) => {
-      message.info('点击了 重命名');
-      console.log('item: ', item);
+      message.info(`右键 ${item.name}，点击了 重命名`);
     },
   },
   {
     title: '删除',
     onClick: (item) => {
-      message.info('点击了 删除');
-      console.log('item: ', item);
+      message.info(`右键 ${item.name}，点击了 删除`);
     },
   },
 ];
@@ -62,49 +59,43 @@ const clickData: ContextDataItem[] = Array.from({ length: 10 }).map((ele, index)
 }));
 
 export default () => {
-  const [control, setControl] = useState<{
-    collapsed: boolean;
-    isSearch: boolean;
-  }>({
-    collapsed: false,
-    isSearch: false,
-  });
-  const [layout, setLayout] = useState<'inline' | 'grid'>('inline');
-  const onSelect = (route: any) => {
-    message.success('click ' + route.name);
-  };
-
-  const handleChange = (key: string) => (checked: boolean) => {
-    setControl({ ...control, [key]: checked });
-  };
-
-  const handleChangeLayout = (checked: boolean) => {
-    setLayout(checked ? 'inline' : 'grid');
+  const handleContextMenu = (data) => {
+    console.log('ContextDataItem: ', data);
   };
 
   return (
-    <>
-      <Row gutter={[16, 24]} id="handleContextMenuLeft">
-        {clickData.map((ele) => (
-          <Col
-            style={{
-              backgroundColor: '#0092ff',
-              margin: '0 12px',
-              height: '40px',
-              lineHeight: '40px',
-              textAlign: 'center',
-            }}
-            data-click={true}
-            data-data={JSON.stringify(ele)}
-            span={6}
-            key={ele.id}
-          >
-            {ele.name}
-          </Col>
+    <div>
+      <Divider orientation="left">使用 children 元素绑定鼠标右键事件</Divider>
+      <Row gutter={[16, 24]}>
+        {clickData.map((ele, index) => (
+          <RightClick menus={rightMenus} data={ele} onContextMenu={handleContextMenu}>
+            <Col
+              style={{
+                backgroundColor: '#0092ff',
+                margin: '0 12px',
+                height: '40px',
+                lineHeight: '40px',
+                textAlign: 'center',
+              }}
+              span={6}
+            >
+              {ele.name}
+            </Col>
+          </RightClick>
         ))}
       </Row>
-      <RightClick menus={rightMenus} id="handleContextMenuLeft" />
-    </>
+
+      <Divider orientation="left">使用元素 id 绑定鼠标右键事件</Divider>
+      <Button id="ContextMenu" type="primary">
+        鼠标右键事件
+      </Button>
+      <RightClick
+        id="ContextMenu"
+        menus={rightMenus}
+        data={{ name: '鼠标右键事件' }}
+        onContextMenu={handleContextMenu}
+      />
+    </div>
   );
 };
 ```
@@ -113,11 +104,13 @@ export default () => {
 
 ### RightClick
 
-| 参数                  | 说明               | 类型                           | 默认值 |
-| --------------------- | ------------------ | ------------------------------ | ------ |
-| menus                 | 右键菜单           | MenuItem[]                     | -      |
-| id                    | 挂载的 dom 元素 id | string                         | -      |
-| onContextMenuCallback | 点击菜单的回调     | function(val: ContextMenuItem) | -      |
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| menus | 右键菜单 | MenuItem[] | - |
+| children | 响应鼠标右键的 dom 元素 | ReactNode | - |
+| data | 传入 组件的 data 数据，可以用通过 onContextMenu 方法返回，用于逻辑处理 | any | - |
+| onContextMenu | 鼠标右键的回调 | function(val: any) | - |
+| id | 如果没有 children 元素的话，将鼠标右键事件挂载带对应 id 的 dom 元素上 | string | - |
 
 ### MenuItem
 
@@ -125,7 +118,3 @@ export default () => {
 | ------- | -------------- | ------------------ | ------ |
 | title   | 菜单名称       | string             | -      |
 | onClick | 菜单的点击事件 | (val: any) => void | -      |
-
-### ContextMenuItem
-
-右键点击的区域的 data 数据，可以从右键菜单中拿到，用于业务逻辑处理
