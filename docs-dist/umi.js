@@ -22336,14 +22336,47 @@
               '\u89e3\u51b3\u65b9\u6848',
             ),
             a.a.createElement(
-              'p',
+              'ul',
               null,
-              '\u6267\u884c\u4e0b\u9762\u547d\u4ee4\uff0c\u53d6\u6d88\u4ee3\u7406',
+              a.a.createElement(
+                'li',
+                null,
+                '\u6267\u884c\u4e0b\u9762\u547d\u4ee4\uff0c\u53d6\u6d88\u4ee3\u7406',
+              ),
             ),
             a.a.createElement(i['a'], {
               code: 'git config --global --unset http.proxy\ngit config --global --unset https.proxy',
               lang: 'unknown',
             }),
+            a.a.createElement(
+              'ul',
+              null,
+              a.a.createElement(
+                'li',
+                null,
+                a.a.createElement(
+                  'p',
+                  null,
+                  '\u5982\u679c\u4e0a\u9762\u64cd\u4f5c\u8fd8\u662f\u4e0d\u884c\u7684\u8bdd\uff0c\u5c31\u9700\u8981\u67e5\u8be2\u4e00\u4e0b\u53ef\u7528\u7684 IP',
+                ),
+                a.a.createElement('ol', null, a.a.createElement('li', null, '\u67e5\u8be2 IP')),
+                a.a.createElement(
+                  'p',
+                  null,
+                  '\u5728 ',
+                  a.a.createElement('code', null, 'https://www.ipaddress.com/'),
+                  ' \u4e0a\u641c\u7d22 ',
+                  a.a.createElement('code', null, 'github.com'),
+                  ' \u5f97\u5230\u53ef\u7528\u7684 IP',
+                ),
+                a.a.createElement(
+                  'ol',
+                  { start: 2 },
+                  a.a.createElement('li', null, '\u4fee\u6539 host \u6587\u4ef6'),
+                ),
+                a.a.createElement(i['a'], { code: '140.82.112.4 github.com', lang: 'unknown' }),
+              ),
+            ),
           ),
         );
       });
@@ -39868,7 +39901,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/guide/git-help.md',
-                updatedTime: 1667352405e3,
+                updatedTime: 1670981075e3,
                 title: '\u5e38\u7528\u7684Git\u547d\u4ee4',
                 nav: { path: '/guide', title: '\u79ef\u7d2f', order: 1 },
                 group: {
