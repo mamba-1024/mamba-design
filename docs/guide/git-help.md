@@ -215,3 +215,18 @@ git config --global http.sslverify false
 ```
 git config --system http.sslverify false
 ```
+
+## 本地执行 git push 向 github 推送代码的时候报错
+
+### 443 报错内容
+
+`Failed to connect to github.com port 443 after 75006 ms: Operation timed out`
+
+### 解决方案
+
+执行下面命令，取消代理
+
+```
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```

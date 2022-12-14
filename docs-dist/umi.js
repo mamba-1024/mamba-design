@@ -22290,6 +22290,60 @@
               code: 'git config --system http.sslverify false',
               lang: 'unknown',
             }),
+            a.a.createElement(
+              'h2',
+              {
+                id: '\u672c\u5730\u6267\u884c-git-push-\u5411-github-\u63a8\u9001\u4ee3\u7801\u7684\u65f6\u5019\u62a5\u9519',
+              },
+              a.a.createElement(
+                o['AnchorLink'],
+                {
+                  to: '#\u672c\u5730\u6267\u884c-git-push-\u5411-github-\u63a8\u9001\u4ee3\u7801\u7684\u65f6\u5019\u62a5\u9519',
+                  'aria-hidden': 'true',
+                  tabIndex: -1,
+                },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '\u672c\u5730\u6267\u884c git push \u5411 github \u63a8\u9001\u4ee3\u7801\u7684\u65f6\u5019\u62a5\u9519',
+            ),
+            a.a.createElement(
+              'h3',
+              { id: '443-\u62a5\u9519\u5185\u5bb9' },
+              a.a.createElement(
+                o['AnchorLink'],
+                { to: '#443-\u62a5\u9519\u5185\u5bb9', 'aria-hidden': 'true', tabIndex: -1 },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '443 \u62a5\u9519\u5185\u5bb9',
+            ),
+            a.a.createElement(
+              'p',
+              null,
+              a.a.createElement(
+                'code',
+                null,
+                'Failed to connect to github.com port 443 after 75006 ms: Operation timed out',
+              ),
+            ),
+            a.a.createElement(
+              'h3',
+              { id: '\u89e3\u51b3\u65b9\u6848' },
+              a.a.createElement(
+                o['AnchorLink'],
+                { to: '#\u89e3\u51b3\u65b9\u6848', 'aria-hidden': 'true', tabIndex: -1 },
+                a.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '\u89e3\u51b3\u65b9\u6848',
+            ),
+            a.a.createElement(
+              'p',
+              null,
+              '\u6267\u884c\u4e0b\u9762\u547d\u4ee4\uff0c\u53d6\u6d88\u4ee3\u7406',
+            ),
+            a.a.createElement(i['a'], {
+              code: 'git config --global --unset http.proxy\ngit config --global --unset https.proxy',
+              lang: 'unknown',
+            }),
           ),
         );
       });
@@ -31216,7 +31270,7 @@
           previewerProps: {
             sources: {
               _: {
-                tsx: "import React, { useState } from 'react';\nimport { Button, Col, message, Row, Space, Switch, Divider } from 'antd';\nimport { RightClick } from 'mamba-design';\nimport { ContextDataItem } from './interface.ts';\n\nconst rightMenus = [\n  {\n    title: '\u67e5\u770b',\n    onClick: (item) => {\n      message.info(`\u53f3\u952e ${item.name}\uff0c\u70b9\u51fb\u4e86 \u67e5\u770b`);\n    },\n  },\n  {\n    title: '\u91cd\u547d\u540d',\n    onClick: (item) => {\n      message.info(`\u53f3\u952e ${item.name}\uff0c\u70b9\u51fb\u4e86 \u91cd\u547d\u540d`);\n    },\n  },\n  {\n    title: '\u5220\u9664',\n    onClick: (item) => {\n      message.info(`\u53f3\u952e ${item.name}\uff0c\u70b9\u51fb\u4e86 \u5220\u9664`);\n    },\n  },\n];\n\nconst clickData: ContextDataItem[] = Array.from({ length: 10 }).map((ele, index) => ({\n  id: index,\n  name: `data-${index}`,\n}));\n\nexport default () => {\n\n  const handleContextMenu = (data) => {\n    console.log('ContextDataItem: ', data)\n  }\n\n  return (\n    <div>\n      <Divider orientation=\"left\">\u4f7f\u7528 children \u5143\u7d20\u7ed1\u5b9a\u9f20\u6807\u53f3\u952e\u4e8b\u4ef6</Divider>\n      <Row gutter={[16, 24]}>\n        {clickData.map((ele, index) => (\n          <RightClick menus={rightMenus} data={ele} onContextMenu={handleContextMenu}>\n            <Col\n              style={{\n                backgroundColor: '#0092ff',\n                margin: '0 12px',\n                height: '40px',\n                lineHeight: '40px',\n                textAlign: 'center',\n              }}\n              span={6}\n            >\n              {ele.name}\n            </Col>\n          </RightClick>\n        ))}\n      </Row>\n\n      <Divider orientation=\"left\">\u4f7f\u7528\u5143\u7d20 id \u7ed1\u5b9a\u9f20\u6807\u53f3\u952e\u4e8b\u4ef6</Divider>\n      <Button id='ContextMenu' type=\"primary\" >\u9f20\u6807\u53f3\u952e\u4e8b\u4ef6</Button>\n      <RightClick id='ContextMenu' menus={rightMenus} data={{name: '\u9f20\u6807\u53f3\u952e\u4e8b\u4ef6'}} onContextMenu={handleContextMenu} />\n    </div>\n  );\n};",
+                tsx: "import React, { useState } from 'react';\nimport { Button, Col, message, Row, Space, Switch, Divider } from 'antd';\nimport { RightClick } from 'mamba-design';\nimport { ContextDataItem } from './interface.ts';\n\nconst rightMenus = [\n  {\n    title: '\u67e5\u770b',\n    onClick: (item) => {\n      message.info(`\u53f3\u952e ${item.name}\uff0c\u70b9\u51fb\u4e86 \u67e5\u770b`);\n    },\n  },\n  {\n    title: '\u91cd\u547d\u540d',\n    onClick: (item) => {\n      message.info(`\u53f3\u952e ${item.name}\uff0c\u70b9\u51fb\u4e86 \u91cd\u547d\u540d`);\n    },\n  },\n  {\n    title: '\u5220\u9664',\n    onClick: (item) => {\n      message.info(`\u53f3\u952e ${item.name}\uff0c\u70b9\u51fb\u4e86 \u5220\u9664`);\n    },\n  },\n];\n\nconst clickData: ContextDataItem[] = Array.from({ length: 10 }).map((ele, index) => ({\n  id: index,\n  name: `data-${index}`,\n}));\n\nexport default () => {\n  const handleContextMenu = (data) => {\n    console.log('ContextDataItem: ', data);\n  };\n\n  return (\n    <div>\n      <Divider orientation=\"left\">\u4f7f\u7528 children \u5143\u7d20\u7ed1\u5b9a\u9f20\u6807\u53f3\u952e\u4e8b\u4ef6</Divider>\n      <Row gutter={[16, 24]}>\n        {clickData.map((ele, index) => (\n          <RightClick menus={rightMenus} data={ele} onContextMenu={handleContextMenu}>\n            <Col\n              style={{\n                backgroundColor: '#0092ff',\n                margin: '0 12px',\n                height: '40px',\n                lineHeight: '40px',\n                textAlign: 'center',\n              }}\n              span={6}\n            >\n              {ele.name}\n            </Col>\n          </RightClick>\n        ))}\n      </Row>\n\n      <Divider orientation=\"left\">\u4f7f\u7528\u5143\u7d20 id \u7ed1\u5b9a\u9f20\u6807\u53f3\u952e\u4e8b\u4ef6</Divider>\n      <Button id=\"ContextMenu\" type=\"primary\">\n        \u9f20\u6807\u53f3\u952e\u4e8b\u4ef6\n      </Button>\n      <RightClick\n        id=\"ContextMenu\"\n        menus={rightMenus}\n        data={{ name: '\u9f20\u6807\u53f3\u952e\u4e8b\u4ef6' }}\n        onContextMenu={handleContextMenu}\n      />\n    </div>\n  );\n};",
               },
             },
             dependencies: {
@@ -39576,7 +39630,7 @@
               exact: !0,
               meta: {
                 filePath: 'src/RightClick/index.md',
-                updatedTime: 167080727e4,
+                updatedTime: 167093753e4,
                 componentName: 'RightClick',
                 title: 'RightClick',
                 nav: { title: '\u7ec4\u4ef6', path: '/components', order: 0 },
@@ -39913,6 +39967,23 @@
                     depth: 3,
                     value: '\u5982\u4f55\u89e3\u51b3',
                     heading: '\u5982\u4f55\u89e3\u51b3',
+                  },
+                  {
+                    depth: 2,
+                    value:
+                      '\u672c\u5730\u6267\u884c git push \u5411 github \u63a8\u9001\u4ee3\u7801\u7684\u65f6\u5019\u62a5\u9519',
+                    heading:
+                      '\u672c\u5730\u6267\u884c-git-push-\u5411-github-\u63a8\u9001\u4ee3\u7801\u7684\u65f6\u5019\u62a5\u9519',
+                  },
+                  {
+                    depth: 3,
+                    value: '443 \u62a5\u9519\u5185\u5bb9',
+                    heading: '443-\u62a5\u9519\u5185\u5bb9',
+                  },
+                  {
+                    depth: 3,
+                    value: '\u89e3\u51b3\u65b9\u6848',
+                    heading: '\u89e3\u51b3\u65b9\u6848',
                   },
                 ],
               },
