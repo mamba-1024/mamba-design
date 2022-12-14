@@ -22367,7 +22367,9 @@
                   a.a.createElement('code', null, 'https://www.ipaddress.com/'),
                   ' \u4e0a\u641c\u7d22 ',
                   a.a.createElement('code', null, 'github.com'),
-                  ' \u5f97\u5230\u53ef\u7528\u7684 IP',
+                  ' \u5f97\u5230\u53ef\u7528\u7684 IP \u6216\u8005\u662f\u901a\u8fc7 ',
+                  a.a.createElement('code', null, 'https://ping.chinaz.com/github.com'),
+                  ' \u67e5\u770b\u53ef\u7528\u7684 IP \u670d\u52a1\u5730\u5740',
                 ),
                 a.a.createElement(
                   'ol',
@@ -39901,7 +39903,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/guide/git-help.md',
-                updatedTime: 1670981075e3,
+                updatedTime: 1670982405e3,
                 title: '\u5e38\u7528\u7684Git\u547d\u4ee4',
                 nav: { path: '/guide', title: '\u79ef\u7d2f', order: 1 },
                 group: {
