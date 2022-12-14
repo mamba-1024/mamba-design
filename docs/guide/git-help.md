@@ -224,9 +224,21 @@ git config --system http.sslverify false
 
 ### 解决方案
 
-执行下面命令，取消代理
+- 执行下面命令，取消代理
 
 ```
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
+
+- 如果上面操作还是不行的话，就需要查询一下可用的 IP
+
+  1. 查询 IP
+
+  在 `https://www.ipaddress.com/` 上搜索 `github.com` 得到可用的 IP
+
+  2. 修改 host 文件
+
+  ```
+  140.82.112.4 github.com
+  ```
