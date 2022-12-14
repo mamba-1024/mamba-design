@@ -235,7 +235,7 @@ git config --global --unset https.proxy
 
   1. 查询 IP
 
-  在 `https://www.ipaddress.com/` 上搜索 `github.com` 得到可用的 IP
+  在 `https://www.ipaddress.com/` 上搜索 `github.com` 得到可用的 IP 或者是通过 `https://ping.chinaz.com/github.com` 查看可用的 IP 服务地址
 
   2. 修改 host 文件
 
