@@ -124,7 +124,7 @@ export const RadioPro: React.FC<IProps> = (props) => {
       ) : (
         <Space direction="vertical">
           {options.map((ele, k) => {
-            const checked = value?.[id] === ele.value;
+            const checked = value?.[id as string] === ele.value;
             return (
               <Radio
                 key={k}
