@@ -63946,7 +63946,7 @@
               exact: !0,
               meta: {
                 filePath: 'src/RadioPro/index.md',
-                updatedTime: 1671760782e3,
+                updatedTime: 1672102932e3,
                 componentName: 'RadioPro',
                 title: 'RadioPro',
                 nav: { title: '\u7ec4\u4ef6', path: '/components', order: 0 },
