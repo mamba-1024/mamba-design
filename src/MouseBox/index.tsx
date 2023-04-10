@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { outClick } from './outClick.js';
-
+import { throttle } from 'lodash';
 import styles from './style.module.less';
 
 interface IProps {
@@ -46,7 +46,7 @@ function UseSelected({ root, target, onChange }: IProps) {
   }
 
   // 鼠标移动
-  function OnMouseMove(e: { clientX: any; clientY: any }) {
+  const OnMouseMove = throttle((e: { clientX: any; clientY: any }) => {
     const { clientX, clientY } = e;
 
     modal.style.visibility = 'visible';
@@ -67,7 +67,7 @@ function UseSelected({ root, target, onChange }: IProps) {
 
     checkOptions(MLeft, MTop, width, height);
     return false;
-  }
+  }, 100);
 
   // 鼠标移动，执行碰撞检测
   function checkOptions(left: number, top: number, width: number, height: number) {
@@ -208,6 +208,8 @@ function UseSelected({ root, target, onChange }: IProps) {
       rootElement = document.querySelector(root) as HTMLElement;
       rootElement.style.position = 'relative';
       rootElement.style.cursor = 'pointer';
+      // 禁止选中网页上的内容，
+      rootElement.setAttribute('onselectstart', 'return false');
       // 鼠标框选容器中可被选中的子元素
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
@@ -245,7 +247,11 @@ function UseSelected({ root, target, onChange }: IProps) {
     }
   }, [root, target]);
 
-  return <div className={`${styles.mouseModal}`} id="mouseModal" />;
+  return (
+    <React.Fragment>
+      <div className={`${styles.mouseModal}`} id="mouseModal" />
+    </React.Fragment>
+  );
 }
 
 export default UseSelected;
